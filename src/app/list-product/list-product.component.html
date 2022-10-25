@@ -1,0 +1,12 @@
+<h2 [ngStyle] = "{color:isThisIngredientVital ? 'red' : 'green'}">{{title}}</h2>
+<p>Les ingrédients sont vital?</p> 
+<button (click) = "isThisIngredientVital = !isThisIngredientVital">
+    {{isThisIngredientVital ? "Non" : "Oui"}}
+</button>
+<ul>
+    <li>Pommes de terre</li>
+    <li [ngStyle]="{backgroundColor:isThisIngredientVital ? 'red' : 'yellow'}">Raclette</li>
+    <li>Jambon</li>
+    <li [ngClass]="{'color': isThisIngredientVital}">Cornichons</li>
+    <li>Chou-fleur</li>
+</ul>

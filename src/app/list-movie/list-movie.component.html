@@ -1,0 +1,11 @@
+<h2>{{list}}</h2>
+<button (click) = "showMovie = !showMovie">
+    {{showMovie ? "Cacher la liste de film" : "Montrer la liste de film"}}
+</button>
+<ul *ngIf = "showMovie">
+    <li *ngFor="let movie of movies" 
+        appDisplayMovie
+        [ngStyle] = "{listStyleType:'none'}">
+            {{movie}}
+    </li>
+</ul>
